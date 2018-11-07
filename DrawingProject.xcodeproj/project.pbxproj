@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		75130A692193386D005B71A6 /* ArtCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75130A682193386D005B71A6 /* ArtCollectionViewController.swift */; };
 		75716BA4218B3D33006249BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75716BA3218B3D33006249BA /* AppDelegate.swift */; };
 		75716BA6218B3D33006249BA /* CreativityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75716BA5218B3D33006249BA /* CreativityViewController.swift */; };
 		75716BA9218B3D33006249BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75716BA7218B3D33006249BA /* Main.storyboard */; };
@@ -14,6 +15,8 @@
 		75716BAE218B3D34006249BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75716BAC218B3D34006249BA /* LaunchScreen.storyboard */; };
 		75716BB9218B3D34006249BA /* DrawingProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75716BB8218B3D34006249BA /* DrawingProjectTests.swift */; };
 		75716BC4218B3D34006249BA /* DrawingProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75716BC3218B3D34006249BA /* DrawingProjectUITests.swift */; };
+		75716BD8218B4B54006249BA /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75716BD7218B4B54006249BA /* DrawingView.swift */; };
+		75716BDA218B5885006249BA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75716BD9218B5885006249BA /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		75130A682193386D005B71A6 /* ArtCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCollectionViewController.swift; sourceTree = "<group>"; };
 		75716BA0218B3D33006249BA /* DrawingProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawingProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75716BA3218B3D33006249BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75716BA5218B3D33006249BA /* CreativityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreativityViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,8 @@
 		75716BBF218B3D34006249BA /* DrawingProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawingProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75716BC3218B3D34006249BA /* DrawingProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingProjectUITests.swift; sourceTree = "<group>"; };
 		75716BC5218B3D34006249BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75716BD7218B4B54006249BA /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
+		75716BD9218B5885006249BA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +83,8 @@
 		75716B97218B3D33006249BA = {
 			isa = PBXGroup;
 			children = (
+				75716BD9218B5885006249BA /* Default-568h@2x.png */,
 				75716BA2218B3D33006249BA /* DrawingProject */,
-				75716BB7218B3D34006249BA /* DrawingProjectTests */,
 				75716BC2218B3D34006249BA /* DrawingProjectUITests */,
 				75716BA1218B3D33006249BA /* Products */,
 			);
@@ -97,12 +103,11 @@
 		75716BA2218B3D33006249BA /* DrawingProject */ = {
 			isa = PBXGroup;
 			children = (
-				75716BA3218B3D33006249BA /* AppDelegate.swift */,
-				75716BA5218B3D33006249BA /* CreativityViewController.swift */,
-				75716BA7218B3D33006249BA /* Main.storyboard */,
-				75716BAA218B3D34006249BA /* Assets.xcassets */,
-				75716BAC218B3D34006249BA /* LaunchScreen.storyboard */,
-				75716BAF218B3D34006249BA /* Info.plist */,
+				75716BD1218B48B0006249BA /* Model */,
+				75716BD3218B48D0006249BA /* Resources */,
+				75716BD5218B4900006249BA /* Controller */,
+				75716BD6218B490E006249BA /* View */,
+				75716BB7218B3D34006249BA /* DrawingProjectTests */,
 			);
 			path = DrawingProject;
 			sourceTree = "<group>";
@@ -123,6 +128,43 @@
 				75716BC5218B3D34006249BA /* Info.plist */,
 			);
 			path = DrawingProjectUITests;
+			sourceTree = "<group>";
+		};
+		75716BD1218B48B0006249BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		75716BD3218B48D0006249BA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				75716BA3218B3D33006249BA /* AppDelegate.swift */,
+				75716BAA218B3D34006249BA /* Assets.xcassets */,
+				75716BAF218B3D34006249BA /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		75716BD5218B4900006249BA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				75716BA5218B3D33006249BA /* CreativityViewController.swift */,
+				75130A682193386D005B71A6 /* ArtCollectionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		75716BD6218B490E006249BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				75716BAC218B3D34006249BA /* LaunchScreen.storyboard */,
+				75716BA7218B3D33006249BA /* Main.storyboard */,
+				75716BD7218B4B54006249BA /* DrawingView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75716BAE218B3D34006249BA /* LaunchScreen.storyboard in Resources */,
+				75716BDA218B5885006249BA /* Default-568h@2x.png in Resources */,
 				75716BAB218B3D34006249BA /* Assets.xcassets in Resources */,
 				75716BA9218B3D33006249BA /* Main.storyboard in Resources */,
 			);
@@ -256,7 +299,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75716BD8218B4B54006249BA /* DrawingView.swift in Sources */,
 				75716BA6218B3D33006249BA /* CreativityViewController.swift in Sources */,
+				75130A692193386D005B71A6 /* ArtCollectionViewController.swift in Sources */,
 				75716BA4218B3D33006249BA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,7 +476,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DrawingProject/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DrawingProjectUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -448,7 +493,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DrawingProject/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DrawingProjectUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
