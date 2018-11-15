@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,28 +41,51 @@
             </objects>
             <point key="canvasLocation" x="672.79999999999995" y="34.632683658170919"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Art Collection View Controller-->
         <scene sceneID="sdo-XP-Bsd">
             <objects>
-                <collectionViewController id="8AQ-Hj-i0A" sceneMemberID="viewController">
+                <collectionViewController id="8AQ-Hj-i0A" customClass="ArtCollectionViewController" customModule="DrawingProject" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="jPK-Mi-m1j">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Db3-Ms-tOy">
-                            <size key="itemSize" width="50" height="50"/>
+                            <size key="itemSize" width="223" height="253"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Wds-xz-JBA">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="artIdentifier" id="Wds-xz-JBA" customClass="ArtCell" customModule="DrawingProject" customModuleProvider="target">
+                                <rect key="frame" x="76" y="0.0" width="223" height="253"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="223" height="253"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Art Image" translatesAutoresizingMaskIntoConstraints="NO" id="9Ke-E7-wRC" customClass="ArtImage">
+                                            <rect key="frame" x="-9" y="0.0" width="240" height="195"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="1" green="0.99205349306520441" blue="0.21672796255969551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0N-iF-J7i" customClass="ArtLabel" customModule="DrawingProject" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="203" width="231" height="50"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </view>
+                                <color key="backgroundColor" red="1" green="0.64748287326963982" blue="0.78805025865977096" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="T0N-iF-J7i" secondAttribute="bottom" id="4JM-5X-dcI"/>
+                                    <constraint firstItem="T0N-iF-J7i" firstAttribute="leading" secondItem="Wds-xz-JBA" secondAttribute="leading" id="4UV-p6-0Jo"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="T0N-iF-J7i" secondAttribute="trailing" constant="-24" id="Ubi-c4-QhV"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="artImage" destination="9Ke-E7-wRC" id="FtH-vI-QZH"/>
+                                    <outlet property="artLabel" destination="T0N-iF-J7i" id="kBY-uO-sRd"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -72,7 +96,10 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bsx-ba-jKi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1385" y="35"/>
+            <point key="canvasLocation" x="1384.8" y="34.632683658170919"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Art Image" width="16" height="16"/>
+    </resources>
 </document>
