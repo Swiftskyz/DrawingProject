@@ -25,6 +25,7 @@ public class ArtCollectionViewController: UICollectionViewController
             UIImage(named : "DOVAHKIIN"),
             UIImage(named : "howdy"),
             UIImage(named : "EagleView"),
+            UIImage(named : "SkylarOctocat")
                 
             
         ]
@@ -36,13 +37,8 @@ public class ArtCollectionViewController: UICollectionViewController
             "DOVAHKIIN",
             "howdy",
             "EagleView",
-            "be",
-            "one",
-            "to",
-            "one",
-            "with",
-            "creativeCS",
-            "above"
+            "SkylarOctocat",
+
         ]
     }( )
     
